@@ -1,0 +1,90 @@
+.product-container{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #F0F0F0;
+    width: 14rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0 rgba(242,242,242,1);
+    border-radius: 1rem;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    text-align: left;
+
+
+    .img-product {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;    
+        height: 100%;
+        overflow: hidden;
+        border-radius: 1rem;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+    .img-product img {
+        width: 95%;
+        height: auto;
+        max-width: 100vw;
+        max-height: 100vw;
+        border-radius: 1rem;
+        margin: 5px;
+        object-fit: cover;
+    }
+    
+    .card-body{
+        width: 100%;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card-content {
+        margin-bottom: 1rem;
+        h2 {
+        margin: 1rem 0 0.2rem 0.5rem;
+        }
+
+        h3 {
+            margin: 0 0 1rem 0.2rem;
+        }
+
+        p {
+            margin: 0 0 0.5rem 0.2rem;
+        }
+    }
+
+    .pills-container {
+        span {
+            padding: 0.25rem 0.5rem;
+            border-radius: 1rem;
+    
+            &.white {
+                color: #ffffff;
+            }
+    
+            &.status {
+                background-color: #d2c8c8;
+    
+                &.Agotado {
+                    background-color: #ed4040;
+                }
+    
+                &.Ultima-unidad {
+                    background-color: #eeee4f;
+                }
+    
+                &.Disponible {
+                    background-color: #3ee43e;
+                }
+            }
+        }
+    }
+    
+    .stock {
+        border-radius: 1rem;
+    }
+
+    .price {
+        border-radius: 1rem;
+    }
+}

@@ -1,0 +1,49 @@
+<div class="product-container"
+    [ngClass]="
+    {
+      'first' : first,
+      'last' : last,
+      'odd' : odd,
+      'even' : even,
+    }
+    "
+>
+
+@if (productData) {
+    <div class="img-product">
+        <img src={{productData.image_url[0]}} alt={{productData.descripcion}}>
+    </div>
+        <div class="card-body">
+            <div class="card-content">
+                <h2>{{productData.nombre_producto}}</h2>
+                <p><strong>{{productData.descripcion}}</strong></p>
+            </div>
+        </div>
+        <div class="card-content pills-container">
+            <p>Valor: 
+                <span class="price">
+                    ${{productData.valor}}        
+                </span>
+            </p>
+            <p>Talla: 
+                <span class="Talla"
+                >
+                    {{productData.talla}}
+                </span>
+            </p>
+            <p>Estado:
+                <span class="status"
+                [ngClass]="productData.class.status"
+                >
+                    {{productData.status}}
+               </span>
+            </p>
+            
+        </div> 
+}@else {
+    No tienes datos que mostrar
+}
+
+
+
+</div>

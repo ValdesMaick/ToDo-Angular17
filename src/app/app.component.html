@@ -1,0 +1,35 @@
+
+
+<div class="nav-container">
+  <app-nav></app-nav>
+</div>
+
+<!-- 
+let f = first;  >>>> la variable para el primer elemento del array products 
+let l = last;   >>>> varaible booleana para el ultimo elmento del array products
+let odd = odd;  >>>> variable para los elementos impares del array 
+let even = even; >>>> variable booleana para los elementos pares del array 
+-->
+<div class="home-container">
+    @for (
+        products of productData;
+        track products.id_producto;
+        let f = $first; 
+        let l = $last;
+        let odd = $odd;
+        let even = $even;
+
+        ) {
+        <app-home
+          [productData]="products"
+          [first]="f"
+          [last]="l"
+          [odd]="odd"
+          [even]="even"
+        >          
+        </app-home>
+    } @empty {
+      No hay datos
+    }
+
+</div>

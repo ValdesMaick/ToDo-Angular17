@@ -1,0 +1,25 @@
+.home-container {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 97%;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+    
+}
+
+.button-valor {
+    justify-content: right;
+    display: flex;
+}
+
+.nav-container {
+    justify-content: right;
+    display: flex;
+    
+}
